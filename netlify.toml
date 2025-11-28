@@ -1,16 +1,13 @@
-# netlify.toml (en la raíz del repositorio)
-
 [build]
-  # 1. Directorio base: Netlify se moverá a esta carpeta antes de ejecutar el comando.
-  base = "client"
+  # NO pongas 'base'. Necesitamos que ejecute desde la raíz donde está package.json
   
-  # 2. Comando de construcción: Ejecutamos la instalación de pnpm y luego el script de build.
-  command = "pnpm install --store=node_modules/.pnpm && pnpm run build:client"
+  # Comando de construcción
+  command = "npm run build:client"
   
-  # 3. Directorio de publicación: DEBE ser 'dist' porque es relativo al directorio base 'client'.
-  publish = "dist" # <-- ¡ESTE ES EL CAMBIO CLAVE!
+  # Directorio de publicación: Vite está configurado para sacar los archivos aquí
+  publish = "dist/public"
 
-# Configuración de redirecciones para Single Page Applications (SPA)
+# Redirecciones para que funcione la navegación (React Router / wouter)
 [[redirects]]
   from = "/*"
   to = "/index.html"
