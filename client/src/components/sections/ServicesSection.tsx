@@ -3,7 +3,7 @@ import FadeInSection from "@/components/FadeInSection";
 import { Button } from "@/components/ui/button";
 
 export default function ServicesSection() {
-  const services = [
+  const services: { title: string; description?: string; link?: string; isExternal?: boolean }[] = [
     { title: "Servicio 1" },
     { title: "Servicio 2" },
     { title: "Servicio 3" },
@@ -11,6 +11,18 @@ export default function ServicesSection() {
     { title: "Servicio 5" },
     { title: "Servicio 6" },
     { title: "Servicio 7" },
+    {
+      title: "Cursos Online",
+      description: "Accede a nuestra plataforma de Odoo E-learning para formación especializada.",
+      link: "https://gerenciandocanales1.odoo.com/",
+      isExternal: true,
+    },
+    {
+      title: "Herramientas para Clientes",
+      description: "Recursos exclusivos para potenciar tu estrategia de canales.",
+      link: "/herramientas",
+      isExternal: false,
+    },
   ];
 
   const scrollToContact = () => {
@@ -46,10 +58,27 @@ export default function ServicesSection() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="flex items-center justify-center min-h-[100px]">
-                    <div className="w-full h-24 bg-primary/5 rounded-lg flex items-center justify-center">
-                      <span className="text-muted-foreground/40 text-sm">Próximamente</span>
-                    </div>
+                    {service.description ? (
+                      <p className="text-center text-sm text-muted-foreground">{service.description}</p>
+                    ) : (
+                      <div className="w-full h-24 bg-primary/5 rounded-lg flex items-center justify-center">
+                        <span className="text-muted-foreground/40 text-sm">Próximamente</span>
+                      </div>
+                    )}
                   </CardContent>
+                  {service.link && (
+                    <div className="p-6 pt-0 text-center">
+                      <a
+                        href={service.link}
+                        target={service.isExternal ? "_blank" : "_self"}
+                        rel={service.isExternal ? "noopener noreferrer" : undefined}
+                      >
+                        <Button variant="default" className="w-full">
+                          {service.isExternal ? "Ir a la Plataforma" : "Ver Herramientas"}
+                        </Button>
+                      </a>
+                    </div>
+                  )}
                 </Card>
               </FadeInSection>
             ))}

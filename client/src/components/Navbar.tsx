@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { APP_LOGO, APP_TITLE } from "@/const";
+import { APP_TITLE } from "@/const";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
@@ -27,6 +27,7 @@ export default function Navbar() {
     { label: "Inicio", id: "hero" },
     { label: "Sobre Nosotros", id: "about" },
     { label: "Servicios", id: "services" },
+    { label: "Nuestro Equipo", id: "team" },
     { label: "Quiénes Somos", id: "who-we-are" },
     { label: "FAQ", id: "faq" },
     { label: "Contacto", id: "contact" },
@@ -44,8 +45,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-3 cursor-pointer hover:scale-105 transition-transform duration-300" onClick={() => scrollToSection("hero")}>
-            <img src={APP_LOGO} alt={APP_TITLE} className="h-12 w-auto" />
-            <span className="text-xl font-bold text-primary hidden sm:inline">
+            <img src="/images/favicon.png" alt={APP_TITLE} className="h-12 w-auto" />
+            <span className="text-xl font-bold text-primary">
               {APP_TITLE}
             </span>
           </div>

@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import { ToolsPage } from "./pages/ToolsPage";
 
 function Router() {
   return (
@@ -14,6 +15,7 @@ function Router() {
       <Route path={"/"} component={Home} />
       <Route path={"/terminos-y-condiciones"} component={TermsAndConditions} />
       <Route path={"/politica-de-privacidad"} component={PrivacyPolicy} />
+      <Route path={"/herramientas"} component={ToolsPage} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

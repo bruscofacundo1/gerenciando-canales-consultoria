@@ -76,14 +76,14 @@ export default function ContactSection() {
     {
       icon: Mail,
       title: "Email",
-      value: "bruscofacundo1@gmail.com",
-      link: "mailto:bruscofacundo1@gmail.com",
+      value: "ebrusco@gerenciandocanales.com",
+      link: "mailto:ebrusco@gerenciandocanales.com",
     },
     {
       icon: Phone,
       title: "Teléfono",
-      value: "+54 9 351 791 5867",
-      link: "tel:+54 9 351 791 5867",
+      value: "+54 9 11 5475-9059",
+      link: "tel:+54 9 11 5475-9059",
     },
     {
       icon: MapPin,
