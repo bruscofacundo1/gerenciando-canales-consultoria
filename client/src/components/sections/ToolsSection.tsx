@@ -24,7 +24,7 @@ const tools: Tool[] = [
   {
     title: "Seguimiento de Participantes JIN",
     description: "Herramienta dedicada al seguimiento y gestión de participantes del curso JIN.",
-    link: "https://seguimiento-participantes2.onrender.com/",
+    link: "",
   },
   {
     title: "Mapa de Operaciones LATAM",
