@@ -6,7 +6,7 @@ export default function WhatsAppButton() {
   const [isOpen, setIsOpen] = useState(false);
   
   // Número de WhatsApp - ACTUALIZAR CON EL NÚMERO REAL
-  const whatsappNumber = "5493517915867"; // Formato: código país + número sin espacios ni guiones
+  const whatsappNumber = "5491154759059"; // Formato: código país + número sin espacios ni guiones
   const defaultMessage = "Hola, me gustaría obtener más información sobre sus servicios de consultoría.";
 
   const handleWhatsAppClick = () => {
